@@ -30,6 +30,7 @@
 body {
     background: var(--bg-url)  no-repeat top
     center/cover;
+    height: 100vh;
 }
 
 body * {
@@ -184,4 +185,25 @@ body * {
         padding: 5px 0;
         text-align: center;
         font-size: 14px;
+    }
+
+    /* media queries */
+    @media (min-width: 320px) and (min-height: 554px) {
+        #container {
+          width: 360px; /* Mantém a largura original */
+          max-width: 100%; /* Impede que o container cresça além de 100% da tela */
+          margin: 56px auto 0px; /* Mantém o margin para centralizar */
+        }
+      }
+      
+
+    @media (min-width: 700px) {
+        :root {
+            --bg-url: url(./assets/bg-desktop.jpg);
+        }
+
+        .light {
+            --bg-url: url(;/assets/bg-desktop-light.jpg);
+        }
+
     }
