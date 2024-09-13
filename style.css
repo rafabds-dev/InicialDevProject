@@ -101,6 +101,8 @@ body * {
     left: 0; /* Alinha à direita do contêiner */
     transform: translateY(-50%); /* Ajusta o botão para o centro verticalmente */
 
+    animation: slide-back 0.2s;
+
 }
 
 #switch-button button {
@@ -115,8 +117,7 @@ body * {
 }
 
     .light #switch-button {
-    right: 0;
-    left: initial;
+    animation: slide-in 0.2s forwards;
     }
 
     /* links */
@@ -206,4 +207,25 @@ body * {
             --bg-url: url(;/assets/bg-desktop-light.jpg);
         }
 
+    }
+
+    /* animation */
+    @keyframes slide-in {
+        from {
+            left: 0;
+
+        }
+        to {
+            left: 50%;
+        }
+    }
+
+    @keyframes slide-back {
+        from {
+            left: 50%;
+
+        }
+        to {
+            left: 0;
+        }
     }
