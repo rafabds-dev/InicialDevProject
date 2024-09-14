@@ -120,6 +120,15 @@ body * {
     animation: slide-in 0.2s forwards;
     }
 
+    #switch-button:hover {
+
+        outline: 8px solid var(--highlight-color); /* Cria o contorno ao passar o mouse */
+        outline-offset: -2px; /* Ajusta o contorno para alinhar mais próximo do botão */
+        border-radius: 50%; /* Garante que o contorno continue redondo */
+        transform: translateY(-50%); /* Mantém o botão centralizado verticalmente */
+        
+    }
+
     /* links */
     ul {
         list-style: none;
